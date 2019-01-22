@@ -1,7 +1,12 @@
+#ifndef PHONEBOOK_ENTRY_H
+# define PHONEBOOK_ENTRY_H
+
 # include <iostream>
+# include <iomanip>
 # include <cstdlib>
 # include <string>
 # include <cstring>
+# include <cctype>
 
 class phonebook_entry {
     std::string firstName;
@@ -14,6 +19,7 @@ class phonebook_entry {
     std::string favFood;
     std::string underwearColor;
     std::string darkestSecret;
+    int         index;
 
     public:
         void    setFirstName(std::string);
@@ -26,5 +32,10 @@ class phonebook_entry {
         void    setFavFood(std::string);
         void    setUnderwearColor(std::string);
         void    setDarkestSecret(std::string);
+        void    setIndex(int);
         void    printEntry(void);
-} entry;
+        void    printShort(void);
+};
+
+void            printColumn(std::string str); 
+#endif
