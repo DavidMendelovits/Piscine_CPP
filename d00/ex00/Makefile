@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@ $(CLANG) $(OBJS) -o $@
 
-%.o: %.cpp
+$(OBJS):
 	@ $(CLANG) $(CPPFLAGS) $(SRCS) -c
 
 clean:
