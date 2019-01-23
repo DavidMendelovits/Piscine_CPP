@@ -20,6 +20,7 @@ void        randomChump() {
     std::cout<<name<<std::endl;
     zombie  rando(name, GRUNT_ZOMBIE);
     rando.announce();
+    std::cout<<rando.zombieName()<<" goes down easily...\n";
 }
 
 void            commenceFight(zombie* challenger, int type) {
@@ -28,16 +29,16 @@ void            commenceFight(zombie* challenger, int type) {
             std::cout<<challenger->zombieName()<<" goes down easily...\n";
             break ;
         case MID_LEVEL_MANAGEMENT_ZOMBIE :
-            std::cout<<"Mid-Level Management Zombie";
+            std::cout<<challenger->zombieName()<<" goes down without a fight. In fact, he resigns and books a trip to Europe to live out his passion: wood-carving. Good for him.\n";
             break ;
         case CORPORATE_HOTSHOT_ZOMBIE :
-            std::cout<<"Corporate Hotshot Zombie";
+            std::cout<<challenger->zombieName()<<" finishes his boba tea and decided he needs a vacation. Easy win.\n";
             break ;
         case WISE_ZOMBIE :
-            std::cout<<"Wise Zombie";
+            std::cout<<"'Why', asks"<<challenger->zombieName()<<" the Wise Zombie. You brain proceeds to explode, leaving a mess everywhere. Better luck next time...\n";
             break ;
         case BOSS_ZOMBIE :
-            std::cout<<"BOSS ZOMBIE";
+            std::cout<<challenger->zombieName()<<" proceeds to devour your entire body, starting at your legs, working his way up to your brain. He likes to save the best part for last. You hear a multiude of cracks and fractures until you meet your demise...\n";
             break ;
     }
 
