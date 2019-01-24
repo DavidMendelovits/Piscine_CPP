@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/01/23 20:36:35 by dmendelo          #+#    #+#             */
+/*   Updated: 2019/01/23 20:36:35 by dmendelo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 # include "HumanA.hpp"
 
 HumanA::HumanA(void) {
     return ;
 }
 
-HumanA::HumanA(std::string name_, Weapon weapon_) {
+HumanA::HumanA(std::string name_, Weapon& weapon_) {
     name = name_;
     weapon = &weapon_;
 }

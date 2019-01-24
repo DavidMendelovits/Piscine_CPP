@@ -1,18 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Human.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/01/23 20:36:13 by dmendelo          #+#    #+#             */
+/*   Updated: 2019/01/23 20:36:15 by dmendelo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 # include "Human.hpp"
 
 Human::Human(void) {
-    Brain brain;
-
-    humanBrain = &brain;
+    return ;
 }
 
-Brain&          Human::getBrain(void) {
-    Brain &br = const_cast<Brain&>(*humanBrain);
-
-    return (br);
+Human::~Human(void) {
+    return ;
 }
 
-std::string     Human::identify(void) {
-    Brain   br = getBrain();
-    return (br.identify());
+Brain const&         Human::getBrain(void) const {
+    return (humanBrain);
+}
+
+std::string         Human::identify(void) {
+    return (getBrain().identify());
 }
